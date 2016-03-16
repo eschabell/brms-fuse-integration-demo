@@ -11,22 +11,22 @@ SERVER_BIN=$JBOSS_HOME/bin
 SRC_DIR=./installs
 PRJ_DIR=./projects/brms-fuse-integration
 SUPPORT_DIR=./support
-BPMS=jboss-bpmsuite-6.2.0.GA-installer.jar
+BPMS=jboss-bpmsuite-installer-6.2.0.BZ-1299002.jar
 EAP=jboss-eap-6.4.0-installer.jar
-EAP_PATCH=jboss-eap-6.4.4-patch.zip
+EAP_PATCH=jboss-eap-6.4.6-patch.zip
 JBOSS_CONFIG=standalone.xml
-EAP_VERSION=6.4.4
+EAP_VERSION=6.4.6
 BPM_VERSION=6.2.0
 
 #Fuse env 
 DEMO_HOME=./target
-FUSE_ZIP=jboss-fuse-full-6.2.0.redhat-133.zip
-FUSE_HOME=$DEMO_HOME/jboss-fuse-6.2.0.redhat-133
+FUSE_ZIP=jboss-fuse-full-6.2.1.redhat-084.zip
+FUSE_HOME=$DEMO_HOME/jboss-fuse-full-6.2.1.redhat-084
 FUSE_PROJECT=projects/bpmsuite-fuse-integration
 FUSE_SERVER_CONF=$FUSE_HOME/etc
 FUSE_SERVER_SYSTEM=$FUSE_HOME/system
 FUSE_SERVER_BIN=$FUSE_HOME/bin
-FUSE_VERSION=6.2.0
+FUSE_VERSION=6.2.1
 
 
 # wipe screen.
@@ -64,7 +64,7 @@ verthree=$(mvn -version | awk '/Apache Maven/{print $3}' | awk -F[=.] '{print $3
 if [[ $verone -eq 3 ]] && [[ $vertwo -eq 1 ]] && [[ $verthree -ge 1 ]]; then
 		echo  Correct Maven version $verone.$vertwo.$verthree
 		echo
-elif [[ $verone -eq 3 ]] && [[ $vertwo -eq 2 ]] && [[ $verthree -le 4 ]]; then
+elif [[ $verone -eq 3 ]] && [[ $vertwo -eq 2 ]] && [[ $verthree -le 5 ]]; then
 		echo  Correct Maven version $verone.$vertwo.$verthree
 		echo
 else
